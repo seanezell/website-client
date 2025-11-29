@@ -55,6 +55,15 @@ const Header = () => {
                     </Link>
 
                     <Link
+                        to="/resume"
+                        className="group flex items-center gap-0.5 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-mono text-sm"
+                    >
+                        <span className="text-primary-600 dark:text-primary-400">&lt;</span>
+                        <span className="group-hover:underline">Resume</span>
+                        <span className="text-primary-600 dark:text-primary-400">/&gt;</span>
+                    </Link>
+
+                    <Link
                         to="/projects"
                         className="group flex items-center gap-0.5 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-mono text-sm"
                     >

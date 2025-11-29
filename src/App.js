@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects";
+import Resume from "./pages/Resume";
 
 // Layout wrapper component that includes Header and Footer
 function Layout({ children }) {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Layout>
     </BrowserRouter>
