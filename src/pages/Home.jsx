@@ -4,7 +4,7 @@ import ProjectGrid from '../components/ProjectGrid';
 import { projects } from '../data/projects';
 
 const Home = () => {
-    const featuredProjects = projects.filter(p => p.featured);
+    const featuredProjects = projects.filter(p => p.isFeatured);
 
     return (
         <div className="space-y-4">

@@ -1,16 +1,8 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaDatabase, FaAws } from 'react-icons/fa';
-import { SiTerraform } from 'react-icons/si';
+import { techStack } from '../data/constants';
 
 const Hero = () => {
-    const techStack = [
-        { icon: <FaReact size={24} />, name: 'React' },
-        { icon: <FaNodeJs size={24} />, name: 'Node.js' },
-        { icon: <FaDatabase size={24} />, name: 'SQL/NoSQL' },
-        { icon: <FaAws size={24} />, name: 'AWS' },
-        { icon: <SiTerraform size={24} />, name: 'Terraform' },
-    ];
-
+    const featuredTech = techStack.filter(p => p.isFeatured);
     return (
         <section className="pt-20 md:pt-32 pb-8 md:pb-12">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 max-w-5xl mx-auto">
@@ -26,11 +18,11 @@ const Hero = () => {
 
                     <p className="text-slate-600 dark:text-slate-400 text-lg mb-12 leading-relaxed">
                         I'm a full-stack Senior Software Engineer with over 15 years of experience building web applications, modernizing legacy systems, and designing cloud-native solutions in AWS.
-                        I love learning new tech, collaborating with great teams, and creating software that's stable, scalable, and enjoyable to work with.
+                        I love learning new tech, collaborating with great teams, and creating software that is stable, scalable, and enjoyable to work with.
                     </p>
 
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mb-8">
-                        {techStack.map((tech) => (
+                        {featuredTech.map((tech) => (
                             <div
                                 key={tech.name}
                                 className="relative flex flex-col items-center gap-2 text-slate-500 hover:text-primary-600 dark:text-slate-400 dark:hover:text-primary-400 transition-colors duration-300 group"

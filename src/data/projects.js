@@ -16,6 +16,6 @@ export const projects = [
     image: 'https://via.placeholder.com/600x400?text=What+to+Play', // Placeholder
     github: 'https://github.com',
     demo: 'https://demo.com',
-    featured: true
+    isFeatured: true
   }
 ];

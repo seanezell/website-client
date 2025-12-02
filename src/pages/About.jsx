@@ -1,30 +1,7 @@
 import React from 'react';
-import { FaCode, FaUsers, FaLightbulb, FaHeart } from 'react-icons/fa';
+import { techStack, highlights } from '../data/constants';
 
 const About = () => {
-    const highlights = [
-        {
-            icon: <FaCode size={24} />,
-            title: "15+ Years Experience",
-            description: "Building scalable web applications and cloud-native solutions"
-        },
-        {
-            icon: <FaUsers size={24} />,
-            title: "Team Player",
-            description: "Mentoring teammates and improving processes"
-        },
-        {
-            icon: <FaLightbulb size={24} />,
-            title: "Problem Solver",
-            description: "From legacy modernization to greenfield projects"
-        },
-        {
-            icon: <FaHeart size={24} />,
-            title: "Passionate Builder",
-            description: "Creating software that's stable, scalable, and enjoyable"
-        }
-    ];
-
     return (
         <div className="max-w-4xl mx-auto space-y-12">
             {/* Header Section */}
@@ -104,12 +81,12 @@ const About = () => {
                     Technologies I Work With
                 </h2>
                 <div className="flex flex-wrap gap-3">
-                    {['JavaScript', 'Node.js', 'React', 'AWS', 'Terraform', 'SQL', '.NET', 'Serverless', 'Git'].map((tech) => (
+                    {techStack.map((tech) => (
                         <span
-                            key={tech}
+                            key={tech.name}
                             className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
                         >
-                            {tech}
+                            {tech.name}
                         </span>
                     ))}
                 </div>
