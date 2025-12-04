@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { techStack } from '../data/techStack';
 
 const ProjectCard = ({ project }) => {
     return (
@@ -42,14 +43,19 @@ const ProjectCard = ({ project }) => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map((tag) => (
-                        <span
-                            key={tag}
-                            className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full"
-                        >
-                            {tag}
-                        </span>
-                    ))}
+                    {project.techIds?.map((techId) => {
+                        const tech = techStack.find(t => t.id === techId);
+                        if (!tech) return null;
+                        return (
+                            <span
+                                key={tech.id}
+                                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full"
+                            >
+                                {tech.icon}
+                                <span>{tech.name}</span>
+                            </span>
+                        );
+                    })}
                 </div>
             </div>
         </div>

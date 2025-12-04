@@ -1,24 +1,13 @@
 import React from "react";
 import { FaBriefcase, FaDownload, FaCalendar, FaBuilding, FaCode } from 'react-icons/fa';
 import { experiences } from '../data/constants';
-
-const skills = [
-    "JavaScript / TypeScript",
-    "Node.js",
-    "React.js",
-    "C# / ASP.NET",
-    "PHP",
-    "SQL (SQL Server, MySQL)",
-    "AWS Serverless (Lambda, API Gateway, DynamoDB, Step Functions)",
-    "Terraform",
-    "CI/CD Pipelines",
-    "Git / GitHub / Azure DevOps",
-    "JSON Schema",
-    "PowerShell",
-    "Jira / Confluence",
-];
+import { techStack } from '../data/techStack';
 
 export default function Resume() {
+    const sortedTechs = [...techStack].sort((a, b) =>
+        ['expert', 'advanced', 'familiar'].indexOf(b.proficiency) - ['expert', 'advanced', 'familiar'].indexOf(a.proficiency)
+    );
+
     return (
         <div className="max-w-4xl mx-auto space-y-12">
             {/* Header Section */}
@@ -103,12 +92,13 @@ export default function Resume() {
                     </h2>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                    {skills.map((skill, i) => (
+                    {sortedTechs.map(tech => (
                         <span
-                            key={i}
-                            className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
+                            key={tech.id}
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
                         >
-                            {skill}
+                            {tech.icon}
+                            <span>{tech.name}</span>
                         </span>
                     ))}
                 </div>

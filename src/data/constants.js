@@ -1,17 +1,10 @@
-import { FaReact, FaNodeJs, FaDatabase, FaAws, FaJs, FaCloud, FaGit, FaCode, FaUsers, FaLightbulb, FaHeart } from 'react-icons/fa';
-import { SiTerraform } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { FaCode, FaUsers, FaLightbulb, FaHeart } from 'react-icons/fa';
 
-export const techStack = [
-    { icon: <FaReact size={24} />, name: 'React', isFeatured: true },
-    { icon: <FaNodeJs size={24} />, name: 'Node.js', isFeatured: true },
-    { icon: <FaDatabase size={24} />, name: 'SQL/NoSQL', isFeatured: true },
-    { icon: <FaAws size={24} />, name: 'AWS', isFeatured: true },
-    { icon: <SiTerraform size={24} />, name: 'Terraform', isFeatured: true },
-    { icon: <FaJs size={24} />, name: 'JavaScript', isFeatured: false },
-    { icon: <TbBrandCSharp size={24} />, name: 'C#', isFeatured: false },
-    { icon: <FaCloud size={24} />, name: 'Cloud', isFeatured: false },
-    { icon: <FaGit size={24} />, name: 'Git', isFeatured: false },
+export const techCategories = [
+    'frontend',
+    'backend',
+    'infrastructure',
+    'database'
 ];
 
 export const highlights = [

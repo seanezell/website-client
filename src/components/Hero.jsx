@@ -1,8 +1,8 @@
 import React from 'react';
-import { techStack } from '../data/constants';
+import { techStack } from '../data/techStack';
 
 const Hero = () => {
-    const featuredTech = techStack.filter(p => p.isFeatured);
+    const featuredTech = techStack.filter(p => p.isFeatured).slice(0, 6);
     return (
         <section className="pt-20 md:pt-32 pb-8 md:pb-12">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 max-w-5xl mx-auto">

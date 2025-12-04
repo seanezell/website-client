@@ -1,7 +1,11 @@
 import React from 'react';
-import { techStack, highlights } from '../data/constants';
+import { highlights, techCategories } from '../data/constants';
+import { capitalize, groupTechStack } from '../utils';
+import { techStack } from '../data/techStack';
 
 const About = () => {
+    const groupedTechs = groupTechStack(techStack, techCategories);
+
     return (
         <div className="max-w-4xl mx-auto space-y-12">
             {/* Header Section */}
@@ -77,17 +81,26 @@ const About = () => {
 
             {/* Tech Stack Section */}
             <div className="pt-8 border-t border-slate-200 dark:border-slate-700">
-                <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+                <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
                     Technologies I Work With
                 </h2>
-                <div className="flex flex-wrap gap-3">
-                    {techStack.map((tech) => (
-                        <span
-                            key={tech.name}
-                            className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
-                        >
-                            {tech.name}
-                        </span>
+                <div className="space-y-8">
+                    {groupedTechs.map((group) => (
+                        <div key={group.category}>
+                            <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+                                {capitalize(group.category)}
+                            </h3>
+                            <div className="flex flex-wrap gap-3">
+                                {group.items.map((tech) => (
+                                    <span
+                                        key={tech.id}
+                                        className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
+                                    >
+                                        {tech.name}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

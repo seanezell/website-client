@@ -12,10 +12,10 @@ export const projects = [
       - Intelligent game recommendations based on user preferences
       - Responsive design with mobile-first approach
     `,
-    tags: ['React', 'Node.js', 'API Gateway', 'Lambda', 'DynamoDB', 'Cognito', 'S3', 'CloudFront'],
     image: 'https://via.placeholder.com/600x400?text=What+to+Play', // Placeholder
     github: 'https://github.com',
     demo: 'https://demo.com',
-    isFeatured: true
+    isFeatured: true,
+    techIds: ['react', 'node', 'aws']
   }
 ];
