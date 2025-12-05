@@ -4,10 +4,6 @@ import { experiences } from '../data/constants';
 import { techStack } from '../data/techStack';
 
 export default function Resume() {
-    const sortedTechs = [...techStack].sort((a, b) =>
-        ['expert', 'advanced', 'familiar'].indexOf(b.proficiency) - ['expert', 'advanced', 'familiar'].indexOf(a.proficiency)
-    );
-
     return (
         <div className="max-w-4xl mx-auto space-y-12">
             {/* Header Section */}
@@ -91,16 +87,44 @@ export default function Resume() {
                         Technical Skills
                     </h2>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                    {sortedTechs.map(tech => (
-                        <span
-                            key={tech.id}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
-                        >
-                            {tech.icon}
-                            <span>{tech.name}</span>
-                        </span>
-                    ))}
+
+                {/* Core Competencies - Expert Level */}
+                <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">
+                        Core Competencies
+                    </h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        {techStack.filter(t => t.proficiency === 'expert').map(tech => (
+                            <div
+                                key={tech.id}
+                                className="flex flex-col items-center gap-2 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-2 border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-all duration-300"
+                            >
+                                <div className="text-primary-600 dark:text-primary-400">
+                                    {tech.icon}
+                                </div>
+                                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 text-center">
+                                    {tech.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Additional Skills - Compact */}
+                <div>
+                    <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+                        Additional Skills
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                        {techStack.filter(t => t.proficiency !== 'expert').map(tech => (
+                            <span
+                                key={tech.id}
+                                className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-sm border border-slate-200 dark:border-slate-700"
+                            >
+                                {tech.name}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

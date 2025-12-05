@@ -1,10 +1,12 @@
 import React from 'react';
-import { highlights, techCategories } from '../data/constants';
-import { capitalize, groupTechStack } from '../utils';
+import { highlights } from '../data/constants';
 import { techStack } from '../data/techStack';
+import { FaGraduationCap } from 'react-icons/fa';
 
 const About = () => {
-    const groupedTechs = groupTechStack(techStack, techCategories);
+    const expertTechs = techStack.filter(t => t.proficiency === 'expert');
+    const advancedTechs = techStack.filter(t => t.proficiency === 'advanced');
+    const familiarTechs = techStack.filter(t => t.proficiency === 'familiar');
 
     return (
         <div className="max-w-4xl mx-auto space-y-12">
@@ -84,24 +86,94 @@ const About = () => {
                 <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
                     Technologies I Work With
                 </h2>
-                <div className="space-y-8">
-                    {groupedTechs.map((group) => (
-                        <div key={group.category}>
-                            <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
-                                {capitalize(group.category)}
-                            </h3>
-                            <div className="flex flex-wrap gap-3">
-                                {group.items.map((tech) => (
-                                    <span
-                                        key={tech.id}
-                                        className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
-                                    >
+                
+                {/* Expert Level */}
+                <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                        <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+                            Expert
+                        </h3>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">
+                            • My core strengths
+                        </span>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        {expertTechs.map((tech) => (
+                            <div
+                                key={tech.id}
+                                className="relative p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-2 border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-all duration-300 hover:shadow-md group"
+                            >
+                                <div className="flex flex-col items-center gap-2 text-center">
+                                    <div className="text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform">
+                                        {tech.icon}
+                                    </div>
+                                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                                         {tech.name}
                                     </span>
-                                ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                </div>
+
+                {/* Advanced Level */}
+                <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                        <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+                            Advanced
+                        </h3>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">
+                            • Solid working knowledge
+                        </span>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                        {advancedTechs.map((tech) => (
+                            <div
+                                key={tech.id}
+                                className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
+                            >
+                                <span className="text-slate-600 dark:text-slate-400">
+                                    {tech.icon}
+                                </span>
+                                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    {tech.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Familiar / Learning Level */}
+                <div>
+                    <div className="flex items-center gap-2 mb-4">
+                        <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+                            Familiar
+                        </h3>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">
+                            • Experience with these technologies
+                        </span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {familiarTechs.map((tech) => (
+                            <div
+                                key={tech.id}
+                                className="relative inline-flex items-center gap-2 px-3 py-1.5 bg-slate-50 dark:bg-slate-800 rounded-md border border-slate-200 dark:border-slate-700 hover:border-primary-400 dark:hover:border-primary-600 transition-colors"
+                            >
+                                <span className="text-sm text-slate-600 dark:text-slate-400">
+                                    {tech.icon}
+                                </span>
+                                <span className="text-sm text-slate-700 dark:text-slate-300">
+                                    {tech.name}
+                                </span>
+                                {tech.isLearning && (
+                                    <span className="inline-flex items-center gap-1 ml-1 px-2 py-0.5 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 rounded text-xs font-medium">
+                                        <FaGraduationCap size={10} />
+                                        Learning
+                                    </span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
