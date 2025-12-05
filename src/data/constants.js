@@ -3,10 +3,10 @@ import { FaCode, FaUsers, FaLightbulb, FaHeart } from 'react-icons/fa';
 export const techCategories = [
     'frontend',
     'backend',
-    'iac',
+    'cloud',
     'devops',
     'database',
-    'tools'
+    'ai'
 ];
 
 export const highlights = [

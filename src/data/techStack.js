@@ -1,6 +1,6 @@
-import { FaReact, FaNodeJs, FaGitAlt, FaAws, FaDatabase } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiTerraform, SiJavascript, SiPython, SiAmazondynamodb, SiMysql, SiGithubactions, SiPhp } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { FaReact, FaNodeJs, FaGitAlt, FaAws, FaDatabase, FaRobot } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTerraform, SiJavascript, SiPython, SiAmazondynamodb, SiMysql, SiGithubactions, SiPhp, SiOpenai } from 'react-icons/si';
+import { TbBrandCSharp, TbSparkles } from 'react-icons/tb';
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
 export const techStack = [
@@ -30,4 +30,10 @@ export const techStack = [
     { id: 'python', name: 'Python', icon: <SiPython size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
     { id: 'csharp', name: 'C# / .NET', icon: <TbBrandCSharp size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
     { id: 'php', name: 'PHP', icon: <SiPhp size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
+
+    // AI-Assisted Development
+    { id: 'ai-tools', name: 'AI-Assisted Development', icon: <TbSparkles size={24} />, category: 'ai', proficiency: 'expert', isFeatured: true },
+    { id: 'github-copilot', name: 'GitHub Copilot', icon: <FaRobot size={24} />, category: 'ai', proficiency: 'expert', isFeatured: false },
+    { id: 'chatgpt', name: 'ChatGPT', icon: <SiOpenai size={24} />, category: 'ai', proficiency: 'expert', isFeatured: false },
+    { id: 'amazon-q', name: 'Amazon Q', icon: <FaAws size={24} />, category: 'ai', proficiency: 'expert', isFeatured: false },
 ];

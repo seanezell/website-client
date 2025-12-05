@@ -67,6 +67,14 @@ const About = () => {
                         but I'm always excited to learn something new when the problem calls for it.
                     </p>
 
+                    <div className="border-l-4 border-primary-400 dark:border-primary-600 pl-6 py-2 bg-slate-50 dark:bg-slate-800/50 rounded-r-lg">
+                        <p className="text-slate-700 dark:text-slate-300">
+                            I'm a strong believer in leveraging AI-assisted development tools to amplify productivity and code quality. 
+                            I regularly use tools like GitHub Copilot, Amazon Q, ChatGPT, and Kiro to accelerate development, 
+                            explore solutions faster, and focus on solving the right problems rather than reinventing the wheel.
+                        </p>
+                    </div>
+
                     <p>
                         Outside of writing code, I genuinely enjoy helping teammates grow, improving team processes, and bringing structure to complex systems.
                         I've found that the best software comes from people who communicate well and care about the craft, so I try to embody both.
