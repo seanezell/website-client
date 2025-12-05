@@ -1,78 +1,33 @@
-import { SiTerraform } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaGitAlt, FaAws, FaDatabase } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTerraform, SiJavascript, SiPython, SiAmazondynamodb, SiMysql, SiGithubactions, SiPhp } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
-import { FaReact, FaNodeJs, FaDatabase, FaAws, FaJs, FaCloud, FaGit } from 'react-icons/fa';
+import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
 export const techStack = [
-    {
-        id: 'react',
-        icon: <FaReact size={24} />,
-        name: 'React',
-        category: 'frontend',
-        proficiency: 'expert',
-        isFeatured: true
-    },
-    {
-        id: 'node',
-        icon: <FaNodeJs size={24} />,
-        name: 'Node.js',
-        category: 'backend',
-        proficiency: 'expert',
-        isFeatured: true
-    },
-    {
-        id: 'sql',
-        icon: <FaDatabase size={24} />,
-        name: 'SQL/NoSQL',
-        category: 'database',
-        proficiency: 'advanced',
-        isFeatured: true
-    },
-    {
-        id: 'aws',
-        icon: <FaAws size={24} />,
-        name: 'AWS',
-        category: 'infrastructure',
-        proficiency: 'expert',
-        isFeatured: true
-    },
-    {
-        id: 'terraform',
-        icon: <SiTerraform size={24} />,
-        name: 'Terraform',
-        category: 'infrastructure',
-        proficiency: 'expert',
-        isFeatured: true
-    },
-    {
-        id: 'javascript',
-        icon: <FaJs size={24} />,
-        name: 'JavaScript',
-        category: 'frontend',
-        proficiency: 'expert',
-        isFeatured: false
-    },
-    {
-        id: 'csharp',
-        icon: <TbBrandCSharp size={24} />,
-        name: 'C#',
-        category: 'backend',
-        proficiency: 'familiar',
-        isFeatured: false
-    },
-    {
-        id: 'cloud',
-        icon: <FaCloud size={24} />,
-        name: 'Cloud',
-        category: 'infrastructure',
-        proficiency: 'expert',
-        isFeatured: false
-    },
-    {
-        id: 'git',
-        icon: <FaGit size={24} />,
-        name: 'Git',
-        category: 'infrastructure',
-        proficiency: 'expert',
-        isFeatured: false
-    },
+    // Featured in Hero
+    { id: 'react', name: 'React', icon: <FaReact size={24} />, category: 'frontend', proficiency: 'expert', isFeatured: true },
+    { id: 'node', name: 'Node.js', icon: <FaNodeJs size={24} />, category: 'backend', proficiency: 'expert', isFeatured: true },
+    { id: 'aws', name: 'AWS', icon: <FaAws size={24} />, category: 'cloud', proficiency: 'expert', isFeatured: true },
+    { id: 'terraform', name: 'Terraform', icon: <SiTerraform size={24} />, category: 'devops', proficiency: 'expert', isFeatured: true },
+    { id: 'azuredevops', name: 'Azure DevOps', icon: <VscAzureDevops size={24} />, category: 'devops', proficiency: 'expert', isFeatured: true },
+
+    //More good stuff
+    { id: 'javascript', name: 'JavaScript', icon: <SiJavascript size={24} />, category: 'frontend', proficiency: 'expert', isFeatured: false },
+    { id: 'sql', name: 'SQL Server', icon: <FaDatabase size={24} />, category: 'database', proficiency: 'expert', isFeatured: false },
+    { id: 'dynamodb', name: 'DynamoDB', icon: <SiAmazondynamodb size={24} />, category: 'database', proficiency: 'expert', isFeatured: true },
+    { id: 'mysql', name: 'MySQL', icon: <SiMysql size={24} />, category: 'database', proficiency: 'expert', isFeatured: false },
+
+    //Stuff I know, but less well
+    { id: 'githubactions', name: 'GitHub Actions', icon: <SiGithubactions size={24} />, category: 'devops', proficiency: 'advanced', isFeatured: false },
+    { id: 'git', name: 'Git', icon: <FaGitAlt size={24} />, category: 'devops', proficiency: 'advanced', isFeatured: false },
+    { id: 'powershell', name: 'PowerShell', icon: <VscTerminalPowershell size={24} />, category: 'devops', proficiency: 'familiar', isFeatured: false },
+
+    //Stuff I'm working on learning
+    { id: 'typescript', name: 'TypeScript', icon: <SiTypescript size={24} />, category: 'frontend', proficiency: 'familiar', isFeatured: false },
+    { id: 'nextjs', name: 'Next.js', icon: <SiNextdotjs size={24} />, category: 'frontend', proficiency: 'familiar', isFeatured: false },
+
+    // Old Legacy stuff I haven't touched in a while
+    { id: 'python', name: 'Python', icon: <SiPython size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
+    { id: 'csharp', name: 'C# / .NET', icon: <TbBrandCSharp size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
+    { id: 'php', name: 'PHP', icon: <SiPhp size={24} />, category: 'backend', proficiency: 'familiar', isFeatured: false },
 ];
