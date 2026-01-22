@@ -12,9 +12,10 @@ export const projects = [
       - Intelligent game recommendations based on user preferences
       - Responsive design with mobile-first approach
     `,
-    image: 'https://via.placeholder.com/600x400?text=What+to+Play', // Placeholder
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    image: '',
+    github: 'https://github.com/seanezell/what2play',
+    demo: 'https://what2play.seanezell.com',
+    status: 'In Progress',
     isFeatured: true,
     techIds: ['react', 'node', 'aws']
   }

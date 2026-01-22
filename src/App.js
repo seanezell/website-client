@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import Resume from "./pages/Resume";
 
 function Layout() {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />,
+      },
+      {
+        path: "projects/:id",
+        element: <ProjectDetail />,
       },
       {
         path: "resume",

@@ -96,4 +96,12 @@ export const experiences = [
             "Managed AD/Exchange and created automation scripts",
         ]
     },
+    {
+        period: "2005-2006",
+        title: "Help Desk Support",
+        company: "Evergreen Aviation",
+        bullets: [
+            "Provided technical support for 300+ users globally",
+        ]
+    }
 ];
