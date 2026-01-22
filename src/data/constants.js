@@ -76,7 +76,16 @@ export const experiences = [
         company: "Linfield College",
         bullets: [
             "Built new applications to replace paper workflows",
-            "Implemented address validation and site improvements",
+            "Implemented security practices that eliminated website breaches (reduced from multiple yearly incidents to zero)",
+        ]
+    },
+    {
+        period: "2007 - 2008",
+        title: "Programmer/Analyst 1",
+        company: "Linfield College",
+        bullets: [
+            "Deployed address validation software reducing returned mail",
+            "Developed custom reports, data entry screens, and import/export processes in Colleague ERP system",
         ]
     },
     {
