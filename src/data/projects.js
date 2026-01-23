@@ -34,7 +34,7 @@ export const projects = [
       - Optimized performance and SEO
     `,
     image: '',
-    github: 'https://github.com/seanezell/portfolio',
+    github: 'https://github.com/seanezell/website',
     demo: 'https://seanezell.com',
     status: 'Live',
     isFeatured: false,
