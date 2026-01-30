@@ -44,7 +44,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/80 backdrop-blur-sm">
+        <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-slate-800/80 backdrop-blur-sm">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-6">
@@ -52,7 +52,7 @@ const Header = () => {
                         <Link
                             key={link.to}
                             to={link.to}
-                            className="group flex items-center gap-0.5 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-mono text-base font-semibold"
+                            className="group flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-mono text-lg font-semibold whitespace-nowrap"
                         >
                             <span className="text-primary-600 dark:text-primary-400">&lt;</span>
                             <span className="group-hover:underline">{link.label}</span>
